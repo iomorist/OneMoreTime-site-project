@@ -4,19 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoSport Gallery</title>
+    <meta name="description" content="One More Time - ваш персональный гид в мире автоспорта и автомобилей">
+    <title>One More Time | Автомобильный блог и галерея</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/ff-trixie" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="logo">One More Time</div>
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">One More Time</span>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
-                <li><a href="#home">Главная</a></li>
+                <li><a href="#home" class="active">Главная</a></li>
                 <li><a href="#gallery">Галерея</a></li>
                 <li><a href="#blog">Блог</a></li>
                 <li><a href="#about">О нас</a></li>
@@ -26,82 +35,150 @@
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="hero-section">
             <div class="hero-content">
                 <h1>One More Time</h1>
-                <p>Исследуйте увлекательный мир гонок и автомобилей</p>
-                <button class="cta-button">Начать просмотр</button>
+                <p class="hero-subtitle">Рассказываем про дрифт и автомобили</p>
+                <div class="hero-buttons">
+                    <button class="cta-button primary">Начать просмотр</button>
+                    <button class="cta-button secondary">Подписаться</button>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Прокрутите вниз</span>
+                <i class="fas fa-chevron-down"></i>
             </div>
         </section>
 
-        <section id="featured-posts">
-            <h2>Популярные статьи</h2>
+        <section id="featured-posts" class="featured-section">
+            <h2 class="section-title">Популярные статьи</h2>
             <div class="posts-grid">
                 <article class="post-card">
-                    <img src="placeholder1.jpg" alt="Автоспорт">
-                    <h3>Новости дрифта</h3>
-                    <p>Последние события в мире соревнований по дрифту</p>
-                    <a href="#" class="read-more">Читать далее</a>
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Автоспорт" loading="lazy">
+                        <div class="post-category">🏎️ Автоспорт</div>
+                    </div>
+                    <div class="post-content">
+                        <h3>Новости RDS</h3>
+                        <p>Последние события в росскийском дрифте</p>
+                        <div class="post-meta">
+                            <span class="post-date">12.02.2024</span>
+                            <span class="post-views">1.2K просмотров</span>
+                        </div>
+                        <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </article>
                 <article class="post-card">
-                    <img src="placeholder2.jpg" alt="Автомобили">
-                    <h3>Обзор новых моделей</h3>
-                    <p>Самые ожидаемые новинки автомобильного рынка</p>
-                    <a href="#" class="read-more">Читать далее</a>
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Автомобили" loading="lazy">
+                        <div class="post-category">🚘 Автомобили</div>
+                    </div>
+                    <div class="post-content">
+                        <h3>Обзор автомобилей</h3>
+                        <p>Красивые и необычные машины</p>
+                        <div class="post-meta">
+                            <span class="post-date">10.02.2024</span>
+                            <span class="post-views">2.5K просмотров</span>
+                        </div>
+                        <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </article>
                 <article class="post-card">
-                    <img src="placeholder3.jpg" alt="Технологии">
-                    <h3>Автомобильные технологии</h3>
-                    <p>Инновации в автомобильной индустрии</p>
-                    <a href="#" class="read-more">Читать далее</a>
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Технологии" loading="lazy">
+                        <div class="post-category">⚡ Технологии</div>
+                    </div>
+                    <div class="post-content">
+                        <h3>Автомобильные технологии</h3>
+                        <p>Инновации в автомобильной индустрии</p>
+                        <div class="post-meta">
+                            <span class="post-date">08.02.2024</span>
+                            <span class="post-views">3.1K просмотров</span>
+                        </div>
+                        <a href="#" class="read-more">Читать далее <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section id="gallery">
-            <h2>Фотогалерея</h2>
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title">Фотогалерея</h2>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="racing">Гонки</button>
+                <button class="filter-btn" data-filter="classic">Классика</button>
+                <button class="filter-btn" data-filter="concept">Концепты</button>
+            </div>
             <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="gallery1.jpg" alt="Гоночный автомобиль">
+                <div class="gallery-item" data-category="racing">
+                    <img src="https://via.placeholder.com/400x300" alt="Гоночный автомобиль" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Гоночный автомобиль</h3>
+                        <p>Формула 1, 2024</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="gallery2.jpg" alt="Классический автомобиль">
+                <div class="gallery-item" data-category="classic">
+                    <img src="https://via.placeholder.com/400x300" alt="Классический автомобиль" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Классический автомобиль</h3>
+                        <p>1960-е годы</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="gallery3.jpg" alt="Спортивный автомобиль">
+                <div class="gallery-item" data-category="concept">
+                    <img src="https://via.placeholder.com/400x300" alt="Концепт-кар" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Концепт-кар</h3>
+                        <p>2024</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="gallery4.jpg" alt="Гоночная трасса">
+                <div class="gallery-item" data-category="racing">
+                    <img src="http://postimg.su/image/7iNB3U37/photo_2025-04-02_21-04-22.jpg" alt="Гоночная трасса" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h3>Lexus Is-F</h3>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="newsletter" class="newsletter-section">
+            <div class="newsletter-content">
+                <h2>Подпишитесь на новости</h2>
+                <p>Будьте в курсе последних новостей и событий</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit" class="subscribe-btn">Подписаться</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>О нас</h3>
-                <p>Мы - команда энтузиастов, увлеченных миром автоспорта и автомобилей.</p>
+                <p>Мы - команда энтузиастов, увлеченных дрифтом и автомобилями.</p>
             </div>
             <div class="footer-section">
                 <h3>Контакты</h3>
-                <p>Email: info@autosportgallery.com</p>
-                <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                <p><i class="fas fa-envelope"></i> rus_spotter@vk.com</p>
+                <p><i class="fas fa-phone"></i> +7 (961) 125-51-00</p>
             </div>
             <div class="footer-section">
                 <h3>Социальные сети</h3>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 AutoSport Gallery. Все права защищены.</p>
+            <p>&copy; 2024 One More Time. Все права защищены.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
